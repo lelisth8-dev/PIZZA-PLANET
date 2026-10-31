@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizza Planet | A melhor pizza da cidade</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-destaque">PIZZA</span> PLANET
+        </a>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="acoes">
+
+            <button class="botao-tema" id="botaoTema" aria-label="Alternar tema">
+                ☾
+            </button>
+
+            <button class="botao-carrinho" id="abrirCarrinho">
+                Carrinho
+                <span id="quantidadeCarrinho">0</span>
+            </button>
+
+            <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- INÍCIO -->
+    <main>
+
+        <section class="inicio" id="inicio">
+
+            <div class="inicio-conteudo">
+
+                <span class="etiqueta">FEITA COM AMOR E SABOR</span>
+
+                <h1>
+                    A felicidade tem
+                    <span>formato de pizza.</span>
+                </h1>
+
+                <p>
+                    Ingredientes selecionados, massa especial e muito queijo.
+                    Descubra o sabor que vai conquistar você!
+                </p>
+
+                <a href="#cardapio" class="botao-principal">
+                    Ver nosso cardápio
+                </a>
+
+                <div class="informacoes-inicio">
+                    <div>
+                        <strong>100%</strong>
+                        <span>Ingredientes selecionados</span>
+                    </div>
+
+                    <div>
+                        <strong>Artesanal</strong>
+                        <span>Massa preparada com cuidado</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inicio-imagem">
+                <img src="imagens/SAINDO DO FORNO.jpeg">
+            </div>
+
+        </section>
+
+
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios">
+
+            <div class="beneficio">
+                <span class="beneficio-icone">01</span>
+                <div>
+                    <h3>Ingredientes frescos</h3>
+                    <p>Qualidade em cada pedaço.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span class="beneficio-icone">02</span>
+                <div>
+                    <h3>Massa especial</h3>
+                    <p>Preparada para conquistar você.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span class="beneficio-icone">03</span>
+                <div>
+                    <h3>Feita na hora</h3>
+                    <p>Sabor especial em cada pedido.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CARDÁPIO -->
+        <section class="cardapio" id="cardapio">
+
+            <div class="titulo-secao">
+                <span class="etiqueta">ESCOLHA A SUA FAVORITA</span>
+                <h2>Nosso <span>cardápio</span></h2>
+                <p>Encontre a pizza perfeita para o seu momento.</p>
+            </div>
+
+            <div class="categorias">
+
+                <button class="categoria ativa" data-categoria="Todas">
+                    Todas
+                </button>
+
+                <button class="categoria" data-categoria="Tradicionais">
+                    Tradicionais
+                </button>
+
+                <button class="categoria" data-categoria="Especiais">
+                    Especiais
+                </button>
+
+                <button class="categoria" data-categoria="Doces">
+                    Doces
+                </button>
+
+            </div>
+
+            <div class="lista-pizzas">
+
+                <!-- PIZZA 1 -->
+                <article class="pizza-card" data-categoria="Tradicionais">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/CALABRESA.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">TRADICIONAL</span>
+
+                        <h3>Calabresa</h3>
+
+                        <p>
+                            Molho de tomate, muçarela, calabresa e cebola.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 39,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="1" data-nome="Calabresa" data-preco="39.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- PIZZA 2 -->
+                <article class="pizza-card" data-categoria="Tradicionais">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/PIZZA MUSSARELA.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">TRADICIONAL</span>
+
+                        <h3>Muçarela</h3>
+
+                        <p>
+                            Molho de tomate, muçarela, orégano e azeitonas.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 36,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="2" data-nome="Muçarela" data-preco="36.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- PIZZA 3 -->
+                <article class="pizza-card" data-categoria="Especiais">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/PIZZA PORTUGUESA.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">ESPECIAL</span>
+
+                        <h3>Portuguesa</h3>
+
+                        <p>
+                            Presunto, ovos, cebola, muçarela e azeitonas.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 44,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="3" data-nome="Portuguesa" data-preco="44.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- PIZZA 4 -->
+                <article class="pizza-card" data-categoria="Especiais">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/PIZZA DE FRANGO.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">ESPECIAL</span>
+
+                        <h3>Frango com Catupiry</h3>
+
+                        <p>
+                            Frango desfiado, catupiry e muçarela.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 46,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="4" data-nome="Frango com Catupiry"
+                                data-preco="46.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- PIZZA 5 -->
+                <article class="pizza-card" data-categoria="Especiais">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/4 QUEIJOS.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">ESPECIAL</span>
+
+                        <h3>Quatro Queijos</h3>
+
+                        <p>
+                            Muçarela, parmesão, provolone e gorgonzola.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 49,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="5" data-nome="Quatro Queijos"
+                                data-preco="49.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- PIZZA 6 -->
+                <article class="pizza-card" data-categoria="Doces">
+
+                    <div class="pizza-imagem">
+                        <img src="imagens/PIZZA DE CHOCOLATE.jpeg">
+                    </div>
+
+                    <div class="pizza-info">
+                        <span class="pizza-categoria">DOCE</span>
+
+                        <h3>Chocolate</h3>
+
+                        <p>
+                            Chocolate cremoso e granulado.
+                        </p>
+
+                        <div class="pizza-rodape">
+                            <strong class="preco">R$ 42,90</strong>
+
+                            <button class="adicionar-carrinho" data-id="6" data-nome="Chocolate" data-preco="42.90">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section class="sobre" id="sobre">
+
+            <div class="sobre-imagem">
+                <img src="imagens/SENDO PREPARADA.jpeg">
+            </div>
+
+            <div class="sobre-conteudo">
+
+                <span class="etiqueta">NOSSA HISTÓRIA</span>
+
+                <h2>Mais que pizza,<br><span>uma experiência.</span></h2>
+
+                <p>
+                    Na Pizza Planet, acreditamos que uma boa pizza transforma
+                    momentos simples em lembranças especiais.
+                </p>
+
+                <p>
+                    Por isso, valorizamos os ingredientes, o preparo cuidadoso
+                    e o sabor de uma pizza feita com dedicação.
+                </p>
+
+                <a href="#cardapio" class="botao-principal">
+                    Escolher minha pizza
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+
+            <div class="titulo-secao">
+                <span class="etiqueta">FALE COM A GENTE</span>
+                <h2>Vamos pedir <span>pizza?</span></h2>
+                <p>Escolha suas favoritas e prepare seu pedido.</p>
+            </div>
+
+            <button class="botao-principal" id="finalizarContato">
+                Pedir pelo WhatsApp
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- CARRINHO -->
+    <div class="fundo-carrinho" id="fundoCarrinho"></div>
+
+    <aside class="carrinho" id="carrinho">
+
+        <div class="carrinho-cabecalho">
+            <h2>Seu carrinho</h2>
+
+            <button id="fecharCarrinho" aria-label="Fechar carrinho">
+                &times;
+            </button>
+        </div>
+
+        <div class="itens-carrinho" id="itensCarrinho">
+            <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="carrinho-final">
+
+            <div class="linha-total">
+                <span>Total do pedido</span>
+                <strong id="totalCarrinho">R$ 0,00</strong>
+            </div>
+
+            <button class="botao-finalizar" id="finalizarPedido">
+                Finalizar pelo WhatsApp
+            </button>
+
+            <button class="botao-limpar" id="limparCarrinho">
+                Limpar carrinho
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-destaque">PIZZA</span> PLANET
+        </a>
+
+        <p>Uma boa pizza deixa qualquer momento melhor.</p>
+
+        <p class="direitos">
+            &copy; <span id="anoAtual"></span> Pizza Planet. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script>
+        // ELEMENTOS DO CARRINHO
+        const botaoAbrirCarrinho = document.getElementById("abrirCarrinho");
+        const botaoFecharCarrinho = document.getElementById("fecharCarrinho");
+        const carrinho = document.getElementById("carrinho");
+        const fundoCarrinho = document.getElementById("fundoCarrinho");
+
+        const itensCarrinho = document.getElementById("itensCarrinho");
+        const quantidadeCarrinho = document.getElementById("quantidadeCarrinho");
+        const totalCarrinho = document.getElementById("totalCarrinho");
+
+        const botoesAdicionar = document.querySelectorAll(".adicionar-carrinho");
+        const botaoLimpar = document.getElementById("limparCarrinho");
+
+        let produtos = [];
+
+
+        // ABRIR CARRINHO
+        botaoAbrirCarrinho.addEventListener("click", function () {
+            carrinho.classList.add("aberto");
+            fundoCarrinho.classList.add("aberto");
+        });
+
+
+        // FECHAR CARRINHO
+        botaoFecharCarrinho.addEventListener("click", fecharCarrinho);
+
+        fundoCarrinho.addEventListener("click", fecharCarrinho);
+
+        function fecharCarrinho() {
+            carrinho.classList.remove("aberto");
+            fundoCarrinho.classList.remove("aberto");
+        }
+
+
+        // ADICIONAR PRODUTOS
+        botoesAdicionar.forEach(function (botao) {
+            botao.addEventListener("click", function () {
+
+                const id = botao.dataset.id;
+                const nome = botao.dataset.nome;
+                const preco = Number(botao.dataset.preco);
+
+                const produtoExistente = produtos.find(function (produto) {
+                    return produto.id === id;
+                });
+
+                if (produtoExistente) {
+                    produtoExistente.quantidade++;
+                } else {
+                    produtos.push({
+                        id: id,
+                        nome: nome,
+                        preco: preco,
+                        quantidade: 1
+                    });
+                }
+
+                atualizarCarrinho();
+
+            });
+        });
+
+
+        // ATUALIZAR CARRINHO
+        function atualizarCarrinho() {
+
+            itensCarrinho.innerHTML = "";
+
+            let quantidadeTotal = 0;
+            let valorTotal = 0;
+
+            if (produtos.length === 0) {
+                itensCarrinho.innerHTML =
+                    '<p class="carrinho-vazio">Seu carrinho está vazio.</p>';
+            }
+
+            produtos.forEach(function (produto) {
+
+                quantidadeTotal += produto.quantidade;
+                valorTotal += produto.preco * produto.quantidade;
+
+                const item = document.createElement("div");
+                item.className = "item-carrinho";
+
+                item.innerHTML = `
+            <div>
+                <h3>${produto.nome}</h3>
+
+                <p>${formatarPreco(produto.preco)}</p>
+
+                <div class="controles-quantidade">
+                    <button class="diminuir">-</button>
+
+                    <span>${produto.quantidade}</span>
+
+                    <button class="aumentar">+</button>
+                </div>
+
+                <button class="remover-item">Remover</button>
+            </div>
+
+            <strong>
+                ${formatarPreco(produto.preco * produto.quantidade)}
+            </strong>
+        `;
+
+                item.querySelector(".diminuir").addEventListener("click", function () {
+                    produto.quantidade--;
+
+                    if (produto.quantidade <= 0) {
+                        produtos = produtos.filter(function (p) {
+                            return p.id !== produto.id;
+                        });
+                    }
+
+                    atualizarCarrinho();
+                });
+
+                item.querySelector(".aumentar").addEventListener("click", function () {
+                    produto.quantidade++;
+                    atualizarCarrinho();
+                });
+
+                item.querySelector(".remover-item").addEventListener("click", function () {
+                    produtos = produtos.filter(function (p) {
+                        return p.id !== produto.id;
+                    });
+
+                    atualizarCarrinho();
+                });
+
+                itensCarrinho.appendChild(item);
+
+            });
+
+            quantidadeCarrinho.textContent = quantidadeTotal;
+            totalCarrinho.textContent = formatarPreco(valorTotal);
+
+        }
+
+
+        // FORMATAR PREÇOS
+        function formatarPreco(valor) {
+            return valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+        }
+
+
+        // LIMPAR CARRINHO
+        botaoLimpar.addEventListener("click", function () {
+            produtos = [];
+            atualizarCarrinho();
+        });
+
+
+        // INICIAR
+        atualizarCarrinho();
+
+        // BOTÃO DO TEMA
+        const botaoTema = document.getElementById("botaoTema");
+
+
+        // APLICAR TEMA
+        function aplicarTema(tema) {
+
+            if (tema === "escuro") {
+                document.body.classList.add("modo-escuro");
+                botaoTema.textContent = "☀";
+            } else {
+                document.body.classList.remove("modo-escuro");
+                botaoTema.textContent = "☾";
+            }
+
+            localStorage.setItem("tema", tema);
+
+        }
+
+        // CARREGAR TEMA SALVO
+        const temaSalvo = localStorage.getItem("tema") || "claro";
+
+        aplicarTema(temaSalvo);
+
+
+        // ALTERNAR TEMA AO CLICAR
+        botaoTema.addEventListener("click", function () {
+
+            const modoEscuroAtivo =
+                document.body.classList.contains("modo-escuro");
+
+            if (modoEscuroAtivo) {
+                aplicarTema("claro");
+            } else {
+                aplicarTema("escuro");
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

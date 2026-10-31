@@ -1,0 +1,950 @@
+/* ========================================
+   1. CORES PRINCIPAIS
+   MUDE AS CORES NESTA PARTE
+======================================== */
+
+:root {
+    --cor-principal: #d62828;
+    --cor-secundaria: #ff8c00;
+    --cor-fundo: #fffaf5;
+    --cor-cartao: #ffffff;
+    --cor-texto: #262626;
+    --cor-texto-secundario: #777777;
+    --cor-borda: #eeeeee;
+    --cor-fundo-alternativo: #fff1e5;
+    --sombra: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+body.modo-escuro {
+    --cor-fundo: #171717;
+    --cor-cartao: #242424;
+    --cor-texto: #f5f5f5;
+    --cor-texto-secundario: #b8b8b8;
+    --cor-borda: #383838;
+    --cor-fundo-alternativo: #29211d;
+    --sombra: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   2. CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ========================================
+   3. CABEÇALHO
+======================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 82px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--cor-cartao);
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.logo-destaque {
+    color: var(--cor-principal);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: var(--cor-principal);
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.botao-tema {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+    background: var(--cor-cartao);
+    color: var(--cor-texto);
+    font-size: 23px;
+}
+
+.botao-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 17px;
+    background: var(--cor-principal);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#quantidadeCarrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: white;
+    color: var(--cor-principal);
+    font-size: 12px;
+}
+
+.botao-menu {
+    display: none;
+    background: transparent;
+    color: var(--cor-texto);
+    border: none;
+    font-size: 27px;
+}
+
+
+/* ========================================
+   4. PÁGINA INICIAL
+======================================== */
+
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 75px 7%;
+    overflow: hidden;
+}
+
+.inicio-conteudo {
+    max-width: 580px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--cor-principal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.inicio h1 {
+    font-size: clamp(35px, 4.2vw, 59px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.inicio h1 span,
+.titulo-secao h2 span,
+.sobre-conteudo h2 span {
+    color: var(--cor-principal);
+}
+
+.inicio-conteudo > p {
+    color: var(--cor-texto-secundario);
+    font-size: 15px;
+    max-width: 470px;
+    margin-bottom: 30px;
+}
+
+.botao-principal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--cor-principal);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botao-principal:hover {
+    background: #b51f1f;
+    transform: translateY(-2px);
+}
+
+.informacoes-inicio {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.informacoes-inicio div {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-inicio strong {
+    font-size: 16px;
+}
+
+.informacoes-inicio span {
+    color: var(--cor-texto-secundario);
+    font-size: 11px;
+}
+
+.inicio-imagem {
+    width: 100%;
+    height: 410px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: var(--cor-fundo-alternativo);
+}
+
+.inicio-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   5. BENEFÍCIOS
+======================================== */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px 7%;
+    background: var(--cor-cartao);
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+.beneficio-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    color: var(--cor-principal);
+    background: var(--cor-fundo-alternativo);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.beneficio h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.beneficio p {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+}
+
+
+/* ========================================
+   6. CARDÁPIO
+======================================== */
+
+.cardapio {
+    padding: 90px 7%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.titulo-secao p {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.categoria {
+    padding: 10px 20px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 25px;
+    background: var(--cor-cartao);
+    color: var(--cor-texto);
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.categoria:hover,
+.categoria.ativa {
+    color: white;
+    background: var(--cor-principal);
+    border-color: var(--cor-principal);
+}
+
+.lista-pizzas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.pizza-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    background: var(--cor-cartao);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.pizza-imagem {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--cor-fundo-alternativo);
+}
+
+.pizza-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.pizza-card:hover .pizza-imagem img {
+    transform: scale(1.05);
+}
+
+.pizza-info {
+    padding: 22px;
+}
+
+.pizza-categoria {
+    color: var(--cor-principal);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.pizza-info h3 {
+    font-size: 19px;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.pizza-info > p {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 44px;
+}
+
+.pizza-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.preco {
+    color: var(--cor-principal);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.adicionar-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 12px;
+    background: var(--cor-principal);
+    color: white;
+    font-size: 26px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.adicionar-carrinho:hover {
+    background: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+.pizza-card.oculta {
+    display: none;
+}
+
+
+/* ========================================
+   7. SOBRE A PIZZARIA
+======================================== */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 75px 7%;
+    background: var(--cor-fundo-alternativo);
+}
+
+.sobre-imagem {
+    height: 370px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-conteudo h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.sobre-conteudo p {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.sobre-conteudo .botao-principal {
+    margin-top: 12px;
+}
+
+
+/* ========================================
+   8. CONTATO
+======================================== */
+
+.contato {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.contato .titulo-secao {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   9. CARRINHO LATERAL
+======================================== */
+
+.fundo-carrinho {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.fundo-carrinho.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(430px, 100%);
+    height: 100%;
+    padding: 25px;
+    padding-bottom: max(25px, env(safe-area-inset-bottom));
+    background: var(--cor-cartao);
+    color: var(--cor-texto);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.carrinho.aberto {
+    transform: translateX(0);
+}
+
+.carrinho-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.carrinho-cabecalho h2 {
+    font-size: 22px;
+}
+
+#fecharCarrinho {
+    background: transparent;
+    color: var(--cor-texto);
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.itens-carrinho {
+    flex: 1;
+    padding: 15px 0;
+}
+
+.carrinho-vazio {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-top: 35px;
+}
+
+.item-carrinho {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.item-carrinho h3 {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.item-carrinho p {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.controles-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.controles-quantidade button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 7px;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-size: 17px;
+}
+
+.remover-item {
+    border: none;
+    background: transparent;
+    color: var(--cor-principal);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.linha-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 1px solid var(--cor-borda);
+    font-size: 14px;
+}
+
+.linha-total strong {
+    font-size: 20px;
+    color: var(--cor-principal);
+}
+
+.botao-finalizar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #25a244;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.botao-limpar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 13px;
+}
+
+
+/* ========================================
+   10. RODAPÉ
+======================================== */
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 40px 7%;
+    background: var(--cor-cartao);
+    border-top: 1px solid var(--cor-borda);
+}
+
+.rodape > p {
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+}
+
+.rodape .direitos {
+    margin-top: 15px;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   11. TABLETS
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .cabecalho {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .inicio,
+    .sobre {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 30px;
+    }
+
+    .beneficios,
+    .cardapio {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .lista-pizzas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .inicio-imagem {
+        height: 340px;
+    }
+}
+
+
+/* ========================================
+   12. CELULARES
+======================================== */
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .cabecalho {
+        min-height: 70px;
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .acoes {
+        gap: 7px;
+    }
+
+    .botao-tema {
+        width: 37px;
+        height: 37px;
+        font-size: 21px;
+    }
+
+    .botao-carrinho {
+        padding: 9px 10px;
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    #quantidadeCarrinho {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .botao-menu {
+        display: block;
+        font-size: 24px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: var(--cor-cartao);
+        border-bottom: 1px solid var(--cor-borda);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 12px 5px;
+        font-size: 14px;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+    .inicio {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 45px 5%;
+        gap: 30px;
+    }
+
+    .inicio h1 {
+        font-size: clamp(34px, 9vw, 47px);
+        letter-spacing: -1.5px;
+    }
+
+    .inicio-conteudo > p {
+        font-size: 14px;
+    }
+
+    .inicio-imagem {
+        height: 280px;
+        border-radius: 18px;
+    }
+
+    .informacoes-inicio {
+        gap: 20px;
+    }
+
+    .informacoes-inicio span {
+        max-width: 150px;
+    }
+
+    .beneficios {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding: 30px 6%;
+    }
+
+    .cardapio {
+        padding: 65px 5%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 32px;
+    }
+
+    .titulo-secao p {
+        font-size: 13px;
+    }
+
+    .categorias {
+        gap: 8px;
+    }
+
+    .categoria {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .lista-pizzas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .pizza-imagem {
+        height: 240px;
+    }
+
+    .pizza-info {
+        padding: 20px;
+    }
+
+    .sobre {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 55px 5%;
+    }
+
+    .sobre-imagem {
+        height: 270px;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .contato {
+        padding: 60px 5%;
+    }
+
+    .carrinho {
+        padding: 20px;
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+
+    .rodape {
+        padding: 35px 5%;
+    }
+}
+
+
+/* ========================================
+   13. CELULARES MUITO ESTREITOS
+======================================== */
+
+@media (max-width: 360px) {
+
+    .cabecalho {
+        gap: 6px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .acoes {
+        gap: 5px;
+    }
+
+    .botao-tema {
+        width: 32px;
+        height: 32px;
+    }
+
+    .botao-carrinho {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .botao-menu {
+        font-size: 21px;
+    }
+
+    .inicio h1 {
+        font-size: 32px;
+    }
+}
